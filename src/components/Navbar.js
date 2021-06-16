@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
     background: "#874389",
-    height: "30rem",
+    height: "100%",
   },
   avatar: {
     display: "block",
@@ -81,7 +81,11 @@ const Navbar = () => {
   const classes = useStyles();
 
   const sideList = (slider) => (
-    <Box className={classes.menuSliderContainer} component="div">
+    <Box
+      className={classes.menuSliderContainer}
+      component="div"
+      onClick={toggleSlider(slider, false)}
+    >
       <Avatar className={classes.avatar} src={avatar} alt="dani-vera" />
       <Divider />
       <List>
@@ -108,7 +112,11 @@ const Navbar = () => {
               <ArrowBack style={{ color: "white" }} />
             </IconButton>
             <Typography variant="h5">Portfolio</Typography>
-            <MobilRightMenuSlider open={state.right}>
+            <MobilRightMenuSlider
+              open={state.right}
+              anchor="right"
+              onClose={toggleSlider("right", false)}
+            >
               {sideList("right")}
             </MobilRightMenuSlider>
           </Toolbar>
