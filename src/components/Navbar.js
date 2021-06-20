@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import {
@@ -47,28 +48,25 @@ const menuIcons = [
   {
     listIcon: <Home />,
     listText: "Home",
+    listPath: "/",
   },
   {
     listIcon: <AssignmentInd />,
     listText: "Resume",
+    listPath: "/resume",
   },
   {
     listIcon: <Apps />,
     listText: "Portfolio",
+    listPath: "/portfolio",
   },
   {
     listIcon: <ContactMail />,
     listText: "Contact",
+    listPath: "/contact",
   },
 ];
 
-// const renderIcons = (menuIcons) => {
-//   menuIcons.map((icon, key) => {
-//     return <div index={key}> {icon} </div>;
-//   });
-// };
-
-// www.flamingoagency.com
 const Navbar = () => {
   const [state, setState] = useState({
     right: false,
@@ -90,7 +88,7 @@ const Navbar = () => {
       <Divider />
       <List>
         {menuIcons.map((item, key) => (
-          <ListItem button key={key}>
+          <ListItem button key={key} component={Link} to={item.listPath}>
             <ListItemIcon className={classes.listItem}>
               {item.listIcon}
             </ListItemIcon>
