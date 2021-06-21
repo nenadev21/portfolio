@@ -2,10 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
+import SinglePagePDFViewer from "./pdf/singlePage";
+import AllPagesPDFViewer from "./pdf/allPages";
+import samplePDF from "./files/Daniela Vera_Resume_02-15-21_Ignite.pdf";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "#ECDEEC",
     maxHeight: "100%",
   },
   timeline: {
@@ -15,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     "&:before": {
       content: "''",
       position: "absolute",
-      height: "100%",
-      border: "1px solid tan",
+      height: "96%",
+      border: "1px solid #bc98bc",
     },
     "&: after": {
       content: "''",
@@ -32,10 +35,10 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  //year container
+  //items with description
   timeLineItem: {
     padding: "1rem",
-    borderBottom: "2px solid tan",
+    borderBottom: "2px solid #bc98bc",
     position: "relative",
     margin: "1rem 3rem 1rem 1rem",
     clear: "both",
@@ -49,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
       right: "-0.625rem",
       top: "calc(50% - 5px)",
       borderStyle: "solid",
-      boderColor: "tomato tomato transparent transparent",
+      // boderColor: "tomato tomato transparent transparent",
       borderWidth: "0.625rem",
       transform: "rotate(45deg)",
     },
@@ -59,21 +62,22 @@ const useStyles = makeStyles((theme) => ({
       "&nth-of-type(2nd)": {
         float: "right",
         margin: "1rem",
-        borderColor: "red",
+        borderColor: "#bc98bc",
       },
       "&:nth-of-type(2nd):before": {
         right: "auto",
         left: "0.625rem",
-        borderColor: "transparent transparent blue blue",
+        borderColor: "transparent transparent tomato tomato",
       },
     },
   },
+  // year box
   timeLineYear: {
     textAlign: "center",
     maxWidth: "9.375rem",
     margin: "0 3rem 0 auto",
     fontSize: "1.8rem",
-    background: "tomato",
+    background: "#4A154B",
     color: "white",
     lineHeight: 1,
     padding: "1rem 0",
@@ -93,14 +97,21 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heading: {
-    color: "tomato",
-    padding: "3rem 0",
+    color: "#4A154B",
+    padding: "3rem 0 0 0",
     textTransform: "uppercase",
   },
   subHeading: {
-    color: "white",
+    color: "#4A154B",
     padding: "0",
     textTransform: "uppercase",
+  },
+  body: {
+    color: "#1264A3",
+    fontStyle: "italic",
+  },
+  subtitle: {
+    color: "black",
   },
 }));
 
@@ -128,17 +139,13 @@ const Resume = () => {
             >
               HR Professional
             </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "tomato" }}
-            >
+            <Typography variant="body1" align="center" className={classes.body}>
               Aconcagua Foods, Sodexo, Thyssenkrupp
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
-              style={{ color: "tan" }}
+              className={classes.subtitle}
             >
               Designing and implementing HR initiatives to drive employee
               experience and business results.
@@ -158,17 +165,13 @@ const Resume = () => {
             >
               Customer Success & Operations
             </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "tomato" }}
-            >
+            <Typography variant="body1" align="center" className={classes.body}>
               Gain Life
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
-              style={{ color: "tan" }}
+              className={classes.subtitle}
             >
               Lead process implementation and software configuration. Verify
               customer production environments for deployment of software
@@ -190,22 +193,29 @@ const Resume = () => {
             >
               Font End Developer
             </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "tomato" }}
-            >
+            <Typography variant="body1" align="center" className={classes.body}>
               Self-Employed
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
-              style={{ color: "tan" }}
+              className={classes.subtitle}
             >
               Web development of projects using JavaScript and React.JS.
               Applying design thinking methodologies and UX best practices.
             </Typography>
           </Box>
+          <div>
+            <h4>Single Page</h4>
+            <SinglePagePDFViewer pdf={samplePDF} />
+
+            <hr />
+
+            <h4>All Pages</h4>
+            <div className="all-page-container">
+              <AllPagesPDFViewer pdf={samplePDF} />
+            </div>
+          </div>
         </Box>
       </Box>
     </>
