@@ -2,9 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
-import SinglePagePDFViewer from "./pdf/singlePage";
-import AllPagesPDFViewer from "./pdf/allPages";
-import samplePDF from "./files/Daniela Vera_Resume_02-15-21_Ignite.pdf";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -205,17 +202,6 @@ const Resume = () => {
               Applying design thinking methodologies and UX best practices.
             </Typography>
           </Box>
-          <div>
-            <h4>Single Page</h4>
-            <SinglePagePDFViewer pdf={samplePDF} />
-
-            <hr />
-
-            <h4>All Pages</h4>
-            <div className="all-page-container">
-              <AllPagesPDFViewer pdf={samplePDF} />
-            </div>
-          </div>
         </Box>
       </Box>
     </>
