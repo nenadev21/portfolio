@@ -1,7 +1,17 @@
 import React from "react";
-import { Typography, Avatar, Grid, Box, makeStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import {
+  Typography,
+  Avatar,
+  Grid,
+  Box,
+  makeStyles,
+  List,
+  ListItem,
+} from "@material-ui/core";
 import avatar from "../images/DaniVera.jpg";
 import Typed from "react-typed";
+import { withStyles } from "@material-ui/styles";
 
 //CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +38,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 1,
   },
+  listItemSelected: {
+    color: "white",
+    width: "150px",
+    border: "1px solid white",
+    borderRadius: "5px",
+    textTransform: "uppercase",
+    padding: "10px",
+    margin: "1rem",
+  },
+  myButton: {
+    margin: "auto",
+  },
 }));
 
 const Header = () => {
@@ -38,28 +60,51 @@ const Header = () => {
         <Avatar className={classes.avatar} src={avatar} alt="dani-vera" />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["Daniela Vera"]} typeSpeed={20} />
+        <Typed strings={["Hello, I'm Daniela!"]} typeSpeed={20} />
       </Typography>
       <br />
-      <Typography className={classes.subtitle}>
+      <Typography variant="h6" className={classes.subtitle}>
         <Typed
           strings={[
             "Front End Development",
             "JavaScript",
-            "React JS",
+            "React.js",
+            "Node.js",
             "Software Implementation",
             "Entrepreneurship",
-            "Design Thinking",
+            "Human-Centered Design",
+            "Customer Empathy",
             "User Experience",
-            "Customer Advocacy",
-            "FinTech",
             "Business Strategy",
+            "FinTech",
           ]}
           typeSpeed={40}
           backSpeed={60}
           loop
         />
       </Typography>
+      <Grid container justify="center">
+        <ListItem
+          selected={true}
+          component={Link}
+          to="/portfolio"
+          className={classes.listItemSelected}
+        >
+          <Typography variant="body1" className={classes.myButton}>
+            Portfolio
+          </Typography>
+        </ListItem>
+        <ListItem
+          button
+          component={Link}
+          to="/resume"
+          className={classes.listItemSelected}
+        >
+          <Typography variant="body1" className={classes.myButton}>
+            Resume
+          </Typography>
+        </ListItem>
+      </Grid>
     </Box>
   );
 };

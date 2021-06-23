@@ -62,7 +62,15 @@ const Contact = () => {
         <Box component="form" className={classes.contactForm}>
           <InputField
             fullWidth={true}
-            label="Name"
+            label="First Name"
+            variant="outlined"
+            margin="dense"
+            size="medium"
+            inputProps={{ style: { color: "#4A154B" } }}
+          ></InputField>
+          <InputField
+            fullWidth={true}
+            label="Last Name"
             variant="outlined"
             margin="dense"
             size="medium"
@@ -78,14 +86,6 @@ const Contact = () => {
             inputProps={{ style: { color: "#4A154B" } }}
           ></InputField>
           <br />
-          <InputField
-            fullWidth={true}
-            label="Company name"
-            variant="outlined"
-            margin="dense"
-            size="medium"
-            inputProps={{ style: { color: "#4A154B" } }}
-          ></InputField>
           <Button
             variant="outlined"
             fullWidth={true}
