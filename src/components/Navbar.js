@@ -15,13 +15,7 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import {
-  ArrowBack,
-  AssignmentInd,
-  Home,
-  Apps,
-  ContactMail,
-} from "@material-ui/icons";
+import { ArrowBack, Work, Home, Apps, Person } from "@material-ui/icons";
 import avatar from "../images/DaniVera.jpg";
 
 //CSS styles
@@ -51,7 +45,12 @@ const menuIcons = [
     listPath: "/",
   },
   {
-    listIcon: <AssignmentInd />,
+    listIcon: <Person />,
+    listText: "About Me",
+    listPath: "/about",
+  },
+  {
+    listIcon: <Work />,
     listText: "Resume",
     listPath: "/resume",
   },
@@ -59,11 +58,6 @@ const menuIcons = [
     listIcon: <Apps />,
     listText: "Portfolio",
     listPath: "/portfolio",
-  },
-  {
-    listIcon: <ContactMail />,
-    listText: "Contact",
-    listPath: "/contact",
   },
 ];
 
