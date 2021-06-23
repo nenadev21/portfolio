@@ -44,10 +44,9 @@ const Header = () => {
       <Typography className={classes.subtitle}>
         <Typed
           strings={[
-            "Web Design",
-            "Web Development",
+            "Front End Development",
             "JavaScript",
-            "React.js",
+            "React JS",
             "Software Implementation",
             "Entrepreneurship",
             "Design Thinking",
