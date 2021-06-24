@@ -86,7 +86,7 @@ const myProjects = [
     projectDescription:
       "This web application provides full lessons and resources that music teachers from primary schools can use in their classes. It was inspired after knowing that music teachers in Chile spend too much time looking for resources that can help them keep students engaged. This is an ongoing project in which I've been collaborating. The other members of the team are Alan (Music teacher) and Arit (Full stack developer).",
     picture: `${imgProject4}`,
-    appUrl: "/",
+    appUrl: "https://serene-tesla-00c8c3.netlify.app",
     appGithub: "https://github.com/nenadev21/edu-mus2.0",
   },
 ];
