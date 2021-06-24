@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { Typography, Box } from "@material-ui/core";
+import { Typography, Box, CardActions, Link } from "@material-ui/core";
 import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
@@ -110,6 +110,10 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     color: "black",
   },
+  link: {
+    color: "#1264A3",
+    fontSize: "20px",
+  },
 }));
 
 const Resume = () => {
@@ -144,7 +148,7 @@ const Resume = () => {
               align="center"
               className={classes.subtitle}
             >
-              Designing and implementing HR initiatives to drive employee
+              Designed and implemented HR initiatives to boost employee
               experience and business results.
             </Typography>
           </Box>
@@ -198,10 +202,21 @@ const Resume = () => {
               align="center"
               className={classes.subtitle}
             >
-              Web development of projects using JavaScript and React.JS.
-              Applying design thinking methodologies and UX best practices.
+              Creating web applications using JavaScript and React. Using customer empathy, human-centered design methodologies, and UX/UI best practices.
             </Typography>
           </Box>
+          <CardActions>
+          <Link
+                  component="a"
+                  href="https://s3.us-east-2.amazonaws.com/newresume6.23.21/Daniela+Vera_Resume_6.23.21.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  size="small"
+                  className={classes.link}
+                >
+                  Download Resume
+            </Link>
+            </CardActions>
         </Box>
       </Box>
     </>
