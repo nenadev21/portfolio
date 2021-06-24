@@ -85,7 +85,7 @@ const AboutMe = () => {
       </Typography>
       <Typography variant="body1" component="p" className={classes.body}>
         I started learning how to code at the beginning of 2021. After working
-        in a FinTech Startup for about 2 years, I felt that becoming a developer
+        in a FinTech Startup for about two years, I felt that becoming a developer
         was the next step in my professional career. I enrolled in an online
         Bootcamp with SheCodes and I've been fully dedicated to learning
         JavaScript, React, and other Front-End libraries since then.
@@ -97,9 +97,9 @@ const AboutMe = () => {
         I have a very unique background. I majored in Psychology and then worked
         in Human Resources for mid-size and large companies in different
         sectors. My studies and experiences have helped me understand the
-        motivations of people and businesses. For the last 3 years, I've been
+        motivations of people and businesses. For the last three years, I've been
         very involved in the entrepreneurial ecosystem. First at Babson College
-        where I studied Human-Centered Design and Entrepreneurship. Then, while
+        where I studied Human-Centered Design, Innovation and Entrepreneurship. Then, while
         being a member of Impact Hub Boston, CIC, and Venture Lane. My approach
         to the process of building software is empathetic, holistic, and
         centered on the user.
