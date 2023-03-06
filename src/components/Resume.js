@@ -210,7 +210,7 @@ const Resume = () => {
           <CardActions>
             <Link
               component='a'
-              href='https://s3.us-east-2.amazonaws.com/myresume3.6.23/Daniela+Vera_Resume_2.20.23_EN.pdf'
+              href='https://dvresumemarch2023.s3.us-east-2.amazonaws.com/Daniela+Vera_Resume_2.12.23_EN.pdf'
               target='_blank'
               rel='noreferrer'
               size='small'
